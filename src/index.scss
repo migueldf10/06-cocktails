@@ -1,0 +1,66 @@
+.App {
+	max-width: 960px;
+	margin: auto;
+	padding: 16px;
+}
+html,
+body {
+	margin: 0;
+}
+
+.header {
+	background: gray;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		margin: 0;
+		list-style: none;
+	}
+}
+
+.cocktail-grid {
+	display: flex;
+	flex-wrap: wrap;
+	.cocktail-grid-item {
+		max-width: 30%;
+	}
+}
+.cocktail-grid-item {
+	list-style: none;
+	font-size: 2rem;
+	:hover {
+		transition: 0.5s;
+		transform: scale(1.1);
+	}
+
+	a {
+		text-decoration: none;
+		line-height: 1.4;
+		display: block;
+		flex-direction: column;
+		padding: 16px;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	h3 {
+		font-size: 1rem;
+		margin: 0;
+	}
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+}
+th {
+	background: lightgrey;
+}
+th,
+td {
+	padding: 12px 7px;
+}

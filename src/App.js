@@ -3,21 +3,36 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import './index.scss'
+import HomePage from './views/homePage';
+import CocktailTypePage from './views/cocktailTypePage';
+import CocktailPage from './views/cocktailPage';
+import SearchResultsPage from './views/searchResultsPage';
+import Header from './components/header'
 
 function App() {
   return (
     <Router>
+      <Header></Header>
 
       <div className="App">
         <Switch>
-          <Router path='/:coctail'>
-            <h1> This is a cocktail page</h1>
-          </Router>
-          <Router path='/'>
+          <Route path='/search/:searchQuery'>
+            <h1> This is the cocktail search results page</h1>
+            <SearchResultsPage />
+          </Route>
+          <Route path='/types/:cocktailEncoded'>
+            <h1> This is the cocktail type category page</h1>
+            <CocktailTypePage />
+          </Route>
+          <Route path='/cocktails/:cocktailId'>
+            <CocktailPage />
+          </Route>
+          <Route path='/'>
             <h1> This is the home page</h1>
-          </Router>
+            <HomePage />
+          </Route>
         </Switch>
       </div>
     </Router>
