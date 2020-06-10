@@ -14,9 +14,9 @@ import Header from './components/header'
 function App() {
   return (
     <Router>
-      <Header></Header>
 
       <div className="App">
+        <Header />
         <Switch>
           <Route path='/search/:searchQuery'>
             <h1> This is the cocktail search results page</h1>
